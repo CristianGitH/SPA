@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Proyectos</h1>
+
+  <table class="table table-bordered">
+    <tr>
+      <td>ID</td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let item of proyectos">
+      <td>{{ item.ProyectosID }}</td>
+      <td>{{ item.Titulo }}</td>
+      <td>{{ item.Cliente }}</td>
+      <td>{{ item.Requerimiento }}</td>
+    </tr>
+  </table>
+</div>
