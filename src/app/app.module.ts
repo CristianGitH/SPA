@@ -7,7 +7,7 @@ import { ProyectosListaComponent } from './component/proyectos-lista/proyectos-l
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { ProyectosService } from './service/proyectos.service';
+import { ProyectosService } from './service/management.service';
 import { ProyectosSaveComponent } from './component/proyectos-save/proyectos-save.component';
 
 
@@ -17,7 +17,7 @@ import { ProyectosSaveComponent } from './component/proyectos-save/proyectos-sav
     AppComponent,
     ProyectosListaComponent,
     ProyectosSaveComponent
-   
+
   ],
   imports: [
     BrowserModule,

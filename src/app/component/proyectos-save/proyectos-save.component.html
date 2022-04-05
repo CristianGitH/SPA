@@ -1,42 +1,36 @@
 <div class="container">
-<h2>Create Proyecto</h2>
+  <h2>Crear Proyecto</h2>
 
-<div class="form-row" *ngIf="showMsg">
-    <div class ="alert alert-{{type}} col-md-12" role="alert">
-    {{msg}}
+  <div class="form-row" *ngIf="showMsg">
+    <div class="alert alert-{{type}} col-md-12" role="alert">
+      {{msg}}
     </div>
-</div>
- 
-<form #ProyectoForm="ngForm">
+  </div>
+
+  <form #ProyectoForm="ngForm">
 
     <div class="Form-row">
-       <div class="col-md-4">
+      <div class="col-md-4">
         <label>ID:</label>
-        <Input type="text" id="proyectoID" name="ProyectoID" placeholder="Enter the Proyect ID"
-        #proyectoID proyectoID [(ngModel)]="proyecto.ProyectosID" />
-     </div>
-     <div class="col-md-4">
-     <label>Titulo:</label>
-     <Input type="text" id="titulo" name="titulo" placeholder="Enter the tittle"
-    [(ngModel)]="proyecto.Titulo" />    
-</div>
-    <div class="col-md-4">
-    <label>Cliente:</label>
-    <Input type="text" id="cliente" name="cliente" placeholder="Enter the client"
-     [(ngModel)]="proyecto.Cliente" />      
-    </div>
-    <div class="col-md-4">
+        <Input type="text" id="proyectoID" name="ProyectoID" placeholder="Enter the Proyect ID" #proyectoID proyectoID
+          [(ngModel)]="proyecto.ProyectosID" />
+      </div>
+      <div class="col-md-4">
+        <label>Titulo:</label>
+        <Input type="text" id="titulo" name="titulo" placeholder="Enter the tittle" [(ngModel)]="proyecto.Titulo" />
+      </div>
+      <div class="col-md-4">
+        <label>Cliente:</label>
+        <Input type="text" id="cliente" name="cliente" placeholder="Enter the client" [(ngModel)]="proyecto.Cliente" />
+      </div>
+      <div class="col-md-4">
         <label>Requerimiento:</label>
         <Input type="text" id="requerimiento" name="requerimiento" placeholder="Enter the requeriment"
-        [(ngModel)]="proyecto.Requerimiento" />
-    </div>
+          [(ngModel)]="proyecto.Requerimiento" />
+      </div>
     </div>
 
     <br>
     <button class="btn btn-outline-primary btn-sm" (click)="save()">save</button>
     <a class="btn btn-outline-primary btn-sm" [routerLink]="[ '/proyectos-list']">Volver</a>
-    </form>
-
-
-
-
+  </form>

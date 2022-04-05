@@ -7,7 +7,6 @@ import { Proyectos } from '../domain/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
-  
   public url: string;
 
   constructor(public httpClient: HttpClient) {

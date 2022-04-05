@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Proyectos } from 'src/app/domain/proyectos';
-import { ProyectosService } from 'src/app/service/proyectos.service';
+import { ProyectosService } from 'src/app/service/management.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./proyectos-lista.component.css']
 })
 export class ProyectosListaComponent implements OnInit {
- 
+
   public proyectos!: Proyectos[];
   public subProyectos!: Subscription;
 
@@ -17,7 +17,7 @@ export class ProyectosListaComponent implements OnInit {
 
   ngOnDestroy(): void{
     this.subProyectos!.unsubscribe();
-    
+
   }
   ngOnInit(): void {
     this.getAll();

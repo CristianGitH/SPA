@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Proyectos } from 'src/app/domain/proyectos';
-import { ProyectosService } from 'src/app/service/proyectos.service';
+import { ProyectosService } from 'src/app/service/management.service';
 
 @Component({
   selector: 'app-proyectos-save',
@@ -16,7 +16,7 @@ export class ProyectosSaveComponent implements OnInit {
   public showMsg: boolean = false;
   public msg!: string;
   public type!: string;
-  
+
   constructor(public proyectoService: ProyectosService,
     private router: Router)  { }
 
