@@ -9,14 +9,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ProyectosService } from './service/management.service';
 import { ProyectosSaveComponent } from './component/proyectos-save/proyectos-save.component';
-
+import { ClienteListaComponent } from './component/cliente-lista/cliente-lista.component';
+import { ClienteService } from './service/cliente.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProyectosListaComponent,
-    ProyectosSaveComponent
+    ProyectosSaveComponent,
+    ClienteListaComponent
 
   ],
   imports: [
@@ -27,7 +29,8 @@ import { ProyectosSaveComponent } from './component/proyectos-save/proyectos-sav
 
   ],
   providers: [
-    ProyectosService
+    ProyectosService,
+    ClienteService
   ],
   bootstrap: [AppComponent]
 })
