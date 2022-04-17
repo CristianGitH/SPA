@@ -10,12 +10,13 @@ import { ClienteService } from 'src/app/service/cliente.service';
 })
 export class ClienteDeleteComponent implements OnInit {
 
-  public id: number;
-  public cliente: Cliente;
+  public id!: number;
+  public cliente!: Cliente;
 
   public showMsg: boolean = false;
-  public msg: string;
-  public type: string;
+  public msg!: string;
+  public type!: string;
+  activatedRouteouteouteatedRoute: any;
 
   constructor(public clienteService: ClienteService,
     private router: Router,
@@ -26,7 +27,7 @@ export class ClienteDeleteComponent implements OnInit {
   }
 
   public getById() {
-    let param = this.activatedRoute.params['_value'];
+    let param = this.activatedRouteouteouteatedRoute.params['_value'];
     this.id = param.id;
 
     this.clienteService.getById(this.id).subscribe(data => {

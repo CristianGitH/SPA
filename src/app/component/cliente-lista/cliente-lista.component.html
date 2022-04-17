@@ -2,6 +2,8 @@
     <br>
     <h1>Clientes</h1>
     <hr class="my-4">
+    <a class="btn btn-sm btn-outline-success"[routerLink]="[ '/clientes-save' ]" >Crear</a>
+    <br>
 
     <table class="table table-bordered">
       <tr>
@@ -15,6 +17,7 @@
             <td> Direccion </td>
             <td> Correo </td>
             <td> Edad </td>
+            <td></td>
       </tr>
       <tr *ngFor="let item of cliente">
         <td>{{ item.Cliente_id   }}</td>
@@ -27,6 +30,11 @@
         <td>{{ item.Direccion }}</td>
         <td>{{ item.Correo }}</td>
         <td>{{ item.Edad }}</td>
+        <td>
+          <div class="btn-group" role="group">
+            <a class="btn btn-sm btn-outline-warning" [routerLink]="[ '/cliente-edit', item.Cliente_id ]">Edit</a>
+          </div>
+        </td>
         <td>
           <div class="btn-group" role="group">
             <a class="btn btn-sm btn-outline-danger" [routerLink]="[ '/cliente-delete', item.Cliente_id ]">Delete</a>
