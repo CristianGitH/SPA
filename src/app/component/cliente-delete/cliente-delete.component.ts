@@ -10,12 +10,12 @@ import { ClienteService } from 'src/app/service/cliente.service';
 })
 export class ClienteDeleteComponent implements OnInit {
 
-  public id: number;
-  public cliente: Cliente;
+  public id: number = 0;
+  public cliente!: Cliente;
 
   public showMsg: boolean = false;
-  public msg: string;
-  public type: string;
+  public msg: string = '';
+  public type: string = '';
 
   constructor(public clienteService: ClienteService,
     private router: Router,
@@ -35,14 +35,14 @@ export class ClienteDeleteComponent implements OnInit {
   }
 
   public delete(){
-    
+
     this.clienteService.delete(this.cliente.Cliente_id).subscribe(data => {
-      this.router.navigate(['/cliente-lista']);
+      this.router.navigate(['/clientes-lista']);
     }, error => {
       console.log(error);
       this.showMsg = true;
       this.msg = 'An error has ocurred in the procedure';
       this.type = 'danger';
-    });    
+    });
   }
 }

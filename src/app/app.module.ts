@@ -12,6 +12,7 @@ import { ProyectosSaveComponent } from './component/proyectos-save/proyectos-sav
 import { ClienteListaComponent } from './component/cliente-lista/cliente-lista.component';
 import { ClienteService } from './service/cliente.service';
 import { ClienteDeleteComponent } from './component/cliente-delete/cliente-delete.component';
+import { ClienteGuardarComponent } from './component/cliente-guardar/cliente-guardar.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ClienteDeleteComponent } from './component/cliente-delete/cliente-delet
     ProyectosListaComponent,
     ProyectosSaveComponent,
     ClienteListaComponent,
-    ClienteDeleteComponent
+    ClienteDeleteComponent,
+    ClienteGuardarComponent
 
   ],
   imports: [
