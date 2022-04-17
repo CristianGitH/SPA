@@ -27,6 +27,11 @@
         <td>{{ item.Direccion }}</td>
         <td>{{ item.Correo }}</td>
         <td>{{ item.Edad }}</td>
+        <td>
+          <div class="btn-group" role="group">
+            <a class="btn btn-sm btn-outline-danger" [routerLink]="[ '/cliente-delete', item.Cliente_id ]">Delete</a>
+          </div>
+        </td>
       </tr>
     </table>
   </div>
