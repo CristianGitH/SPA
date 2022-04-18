@@ -26,8 +26,11 @@ export class ClienteDeleteComponent implements OnInit {
   }
 
   public getById() {
-    let param = this.activatedRoute.params['_value'];
-    this.id = param.id;
+
+    //let param = this.activatedRoute.param['_value'];
+    //this.id = param.id;
+    let param = this.activatedRoute.snapshot.paramMap.get('id');    
+    this.id = Number(param); 
 
     this.clienteService.getById(this.id).subscribe(data => {
       this.cliente = data;
