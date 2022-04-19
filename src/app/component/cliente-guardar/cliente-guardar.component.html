@@ -1,0 +1,65 @@
+<div class="container">
+  <h2>Crear cliente</h2>
+  <div class="form-row" ngif="showMsg">
+    <div class="alert alert-{{type}} col-md-12" role="alert">
+      {{msg}}
+    </div>
+  </div>
+
+  <form #clienteForm="ngForm">
+    <div class="form-row">
+      <div class="col-md-4">
+        <label>Nombre:</label>
+        <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Escribe el nombre"
+        #Nombre [(ngModel)] = "cliente.Nombre"/>
+      </div>
+      <div class="col-md-4">
+        <label>Segundo nombre:</label>
+        <input type="text" class="form-control" id="Segundo_nombre" name="Segundo_nombre" placeholder="Escribe el segundo nombre"
+        #Segundo_nombre [(ngModel)] = "cliente.Segundo_nombre"/>
+      </div>
+      <div class="col-md-4">
+        <label>Apellido:</label>
+        <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Escribe el Apellido"
+        #Apellido [(ngModel)] = "cliente.Apellido"/>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-4">
+        <label>Segundo apellido:</label>
+        <input type="text" class="form-control" id="Segundo_apellido" name="Segundo_apellido" placeholder="Escribe el Segundo apellido"
+        #Segundo_apellido [(ngModel)] = "cliente.Segundo_apellido"/>
+      </div>
+      <div class="col-md-4">
+        <label>Pais:</label>
+        <input type="text" class="form-control" id="Pais" name="Pais" placeholder="Escribe el Pais"
+        #Pais [(ngModel)] = "cliente.Pais"/>
+      </div>
+      <div class="col-md-4">
+        <label>Ciudad:</label>
+        <input type="text" class="form-control" id="Ciudad" name="Ciudad" placeholder="Escribe la Ciudad"
+        #Ciudad [(ngModel)] = "cliente.Ciudad"/>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-4">
+        <label>Direccion:</label>
+        <input type="text" class="form-control" id="Direccion" name="Direccion" placeholder="Escribe la Direccion"
+        #Direccion [(ngModel)] = "cliente.Direccion"/>
+      </div>
+      <div class="col-md-4">
+        <label>Correo:</label>
+        <input type="email" class="form-control" id="Correo" name="Correo" placeholder="Escribe el Correo"
+        #Correo [(ngModel)] = "cliente.Correo"/>
+      </div>
+      <div class="col-md-4">
+        <label>Edad:</label>
+        <input type="number" class="form-control" id="Edad" name="Edad" placeholder="Escribe la Edad"
+        #Edad [(ngModel)] = "cliente.Edad"/>
+      </div>
+    </div>
+    <br />
+    <button class="btn btn-outline-primary btn-sm" (click)="save()">Guardar</button>
+    <a class="btn btn-outline-primary btn-sm" [routerLink]="['/clientes-lista']">Volver</a>
+  </form>
+</div>

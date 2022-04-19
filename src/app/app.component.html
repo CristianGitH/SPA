@@ -15,6 +15,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" [routerLink]="[ '/clientes-lista' ]" >Consultar</a>
+              <li><a class="dropdown-item" [routerLink]="[ '/cliente-guardar' ]" >Crear</a>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -31,8 +32,7 @@
             Requerimientos
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Consultar</a></li>
-            <li><a class="dropdown-item" href="#">Crear</a></li>
+            <li><a class="dropdown-item" [routerLink]="[ '/requirements-list' ]" >Consultar</a>
           </ul>
         </li>
       </ul>

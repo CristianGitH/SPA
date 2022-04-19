@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Requerimientos</h1>
+
+    <table class="table table-bordered">
+       <tr>
+            <td>Id</td>
+            <td>Title</td>
+       </tr>
+       <tr *ngFor="let item of requirement">
+          <td>{{item.RequirementID}}</td>
+          <td>{{item.Title}}</td>
+       </tr>
+    </table>
+</div>

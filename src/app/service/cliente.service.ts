@@ -9,22 +9,26 @@ export class ClienteService {
 
   public url: string;
 
-  constructor(public httpclient: HttpClient) { 
+  constructor(public httpClient: HttpClient) {
     this.url = '';
   }
 
   public getAll():Observable<any>{
-    return this.httpclient.get(this.url);
+    return this.httpClient.get(this.url);
   }
 
   //Llamado por ID
   public getById(id: number): Observable<any> {
-    return this.httpclient.get(this.url + id)
+    return this.httpClient.get(this.url + id)
   };
 
   //Eliminar Cliente
   public delete(id: number) {
-    return this.httpclient.delete(this.url + id);
+    return this.httpClient.delete(this.url + id);
+  }
+
+  public save(cliente: Cliente): Observable<any>{
+    return this.httpClient.post(this.url, cliente)
   }
 
   public edit(cliente: Cliente): Observable<any>{
