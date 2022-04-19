@@ -5,7 +5,7 @@ import { ClienteGuardarComponent } from './component/cliente-guardar/cliente-gua
 import { ClienteListaComponent } from './component/cliente-lista/cliente-lista.component';
 import { ProyectosListaComponent } from './component/proyectos-lista/proyectos-lista.component';
 import { ProyectosSaveComponent } from './component/proyectos-save/proyectos-save.component';
-import { RequirementsListComponent } from './requirements-list/requirements-list.component';
+import { RequirementsListComponent } from './component/requirements-list/requirements-list.component';
 const routes: Routes = [
   { path: 'proyectos-list', component: ProyectosListaComponent},
   { path: 'proyectos-save', component: ProyectosSaveComponent},
