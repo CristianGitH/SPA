@@ -5,12 +5,14 @@ import { ClienteGuardarComponent } from './component/cliente-guardar/cliente-gua
 import { ClienteListaComponent } from './component/cliente-lista/cliente-lista.component';
 import { ProyectosListaComponent } from './component/proyectos-lista/proyectos-lista.component';
 import { ProyectosSaveComponent } from './component/proyectos-save/proyectos-save.component';
+import { RequirementsListComponent } from './requirements-list/requirements-list.component';
 const routes: Routes = [
   { path: 'proyectos-list', component: ProyectosListaComponent},
   { path: 'proyectos-save', component: ProyectosSaveComponent},
   { path: 'clientes-lista', component: ClienteListaComponent},
   { path: 'cliente-delete/:id', component: ClienteDeleteComponent},
   { path: 'cliente-guardar', component: ClienteGuardarComponent},
+  { path: 'requirements-list', component: RequirementsListComponent},
 ];
 
 @NgModule({
