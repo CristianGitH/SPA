@@ -13,6 +13,7 @@ import { ClienteListaComponent } from './component/cliente-lista/cliente-lista.c
 import { ClienteService } from './service/cliente.service';
 import { ClienteDeleteComponent } from './component/cliente-delete/cliente-delete.component';
 import { ClienteGuardarComponent } from './component/cliente-guardar/cliente-guardar.component';
+import { RequirementsListComponent } from './requirements-list/requirements-list.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ClienteGuardarComponent } from './component/cliente-guardar/cliente-gua
     ProyectosSaveComponent,
     ClienteListaComponent,
     ClienteDeleteComponent,
-    ClienteGuardarComponent
+    ClienteGuardarComponent,
+    RequirementsListComponent
 
   ],
   imports: [
