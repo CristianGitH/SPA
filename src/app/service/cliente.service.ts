@@ -10,7 +10,7 @@ export class ClienteService {
   public url: string;
 
   constructor(public httpClient: HttpClient) {
-    this.url = '';
+    this.url = './assets/Customers.json';
   }
 
   public getAll():Observable<any>{
