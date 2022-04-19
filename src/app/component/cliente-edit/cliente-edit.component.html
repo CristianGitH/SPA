@@ -1,0 +1,82 @@
+<div class='container'>
+    <h2>Editar Cliente</h2>
+
+    <div class="form-row" *ngIf="showMsg" >
+        <div class="alert alert-{{type}} col-md-12" role="alert" >
+            {{msg}}
+        </div>
+    </div>
+
+    <form #clienteForm="ngForm" *ngIf="cliente">
+
+        <div class="form-row">
+                <div class-md-4> 
+                    <label>ID:</label>
+                    <input type="text" id="Cliente_id" name="Cliente_id" placeholder="Enter the costumer ID" class="form-control" 
+                    #Cliente_id [(ngModel)] = "cliente.Cliente_id" readonly />
+                </div>
+
+                <div class-md-4> 
+                    <label>Nombre:</label>
+                    <input type="text" id="Nombre" name="Nombre" placeholder="Enter the costumer Nombre" class="form-control" 
+                    #Nombre [(ngModel)] = "cliente.Nombre"/>
+                </div>
+
+                <div class-md-4> 
+                    <label>Segundo_nombre:</label>
+                    <input type="text" id="Segundo_nombre" name="Segundo_nombre" placeholder="Enter the costumer Segundo_nombre" class="form-control" 
+                    #Segundo_nombre [(ngModel)] = "cliente.Segundo_nombre"/>
+                </div>
+
+                <div class-md-4> 
+                    <label>Apellido:</label>
+                    <input type="text" id="Apellido" name="Apellido" placeholder="Enter the costumer Apellido" class="form-control" 
+                    #Apellido [(ngModel)] = "cliente.Apellido"/>
+                </div>
+
+                <div class-md-4> 
+                    <label>Segundo_apellido:</label>
+                    <input type="text" id="Segundo_apellido" name="Segundo_apellido" placeholder="Enter the costumer Segundo_apellido" class="form-control" 
+                    #Segundo_apellido [(ngModel)] = "cliente.Segundo_apellido"/>
+                </div>
+
+                <div class-md-4> 
+                    <label>Pais:</label>
+                    <input type="text" id="Pais" name="Pais" placeholder="Enter the costumer Pais" class="form-control" 
+                    #Pais [(ngModel)] = "cliente.Pais"/>
+                </div>
+
+                <div class-md-4> 
+                    <label>Ciudad:</label>
+                    <input type="text" id="Ciudad" name="Ciudad" placeholder="Enter the costumer Ciudad" class="form-control" 
+                    #Ciudad [(ngModel)] = "cliente.Ciudad"/>
+                </div>
+
+                <div class-md-4> 
+                    <label>Direccion:</label>
+                    <input type="text" id="Direccion" name="Direccion" placeholder="Enter the costumer Direccion" class="form-control" 
+                    #Direccion [(ngModel)] = "cliente.Direccion"/>
+                </div>
+
+
+                <div class-md-4> 
+                    <label>Correo:</label>
+                    <input type="text" id="Correo" name="Correo" placeholder="Enter the costumer Correo" class="form-control" 
+                    #Correo [(ngModel)] = "cliente.Correo"/>
+                </div>
+
+                <div class-md-4> 
+                    <label>Edad:</label>
+                    <input type="text" id="Edad" name="Edad" placeholder="Enter the costumer Edad" class="form-control" 
+                    #Edad [(ngModel)] = "cliente.Edad"/>
+                </div>     
+        </div>
+
+    <br>
+
+        <button class="btn btn-outline-primary btn-sm" (click)="edit()">Edit</button>
+        <a class = "btn btn-outline-primary btn-sm" [routerLink]="[ '/clientes-lista' ]">Back</a>
+
+    </form>
+
+</div>

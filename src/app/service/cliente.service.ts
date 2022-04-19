@@ -10,7 +10,7 @@ export class ClienteService {
   public url: string;
 
   constructor(public httpClient: HttpClient) {
-    this.url = '';
+    this.url = './assets/Customers.json';
   }
 
   public getAll():Observable<any>{
@@ -30,4 +30,9 @@ export class ClienteService {
   public save(cliente: Cliente): Observable<any>{
     return this.httpClient.post(this.url, cliente)
   }
+
+  public edit(cliente: Cliente): Observable<any>{
+    return this.httpClient.put(this.url + cliente.Cliente_id, cliente);
+  };
+
 }

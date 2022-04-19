@@ -16,7 +16,7 @@ export class ClienteDeleteComponent implements OnInit {
   public showMsg: boolean = false;
   public msg: string = '';
   public type: string = '';
-
+  activatedRouteouteouteatedRoute: any;
   constructor(public clienteService: ClienteService,
     private router: Router,
     private activatedRoute: ActivatedRoute){}

@@ -14,7 +14,7 @@ import { ClienteService } from './service/cliente.service';
 import { ClienteDeleteComponent } from './component/cliente-delete/cliente-delete.component';
 import { ClienteGuardarComponent } from './component/cliente-guardar/cliente-guardar.component';
 import { RequirementsListComponent } from './component/requirements-list/requirements-list.component';
-
+import { ClienteEditComponent } from './component/cliente-edit/cliente-edit.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { RequirementsListComponent } from './component/requirements-list/require
     ClienteListaComponent,
     ClienteDeleteComponent,
     ClienteGuardarComponent,
-    RequirementsListComponent
+    RequirementsListComponent,
+    ClienteEditComponent
 
   ],
   imports: [
