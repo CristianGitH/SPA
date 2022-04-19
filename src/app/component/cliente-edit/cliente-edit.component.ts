@@ -38,7 +38,7 @@ export class ClienteEditComponent implements OnInit {
     console.log(this.cliente)
 
     this.ClienteService.edit(this.cliente).subscribe(data => {
-      this.router.navigate(['/cliente-list']);
+      this.router.navigate(['/clientes-lista']);
     }, error => {
 
       console.log(error);
