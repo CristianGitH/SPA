@@ -32,7 +32,7 @@ export class ClienteService {
   }
 
   public edit(cliente: Cliente): Observable<any>{
-    return this.httpclient.put(this.url + cliente.Cliente_id, cliente);
+    return this.httpClient.put(this.url + cliente.Cliente_id, cliente);
   };
 
 }
