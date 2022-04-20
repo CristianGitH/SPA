@@ -15,6 +15,8 @@ import { ClienteDeleteComponent } from './component/cliente-delete/cliente-delet
 import { ClienteGuardarComponent } from './component/cliente-guardar/cliente-guardar.component';
 import { RequirementsListComponent } from './component/requirements-list/requirements-list.component';
 import { ClienteEditComponent } from './component/cliente-edit/cliente-edit.component';
+import { RequirementsEditComponent } from './component/requirements-edit/requirements-edit.component';
+import { RequirementsSaveComponent } from './component/requirements-save/requirements-save.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ClienteEditComponent } from './component/cliente-edit/cliente-edit.comp
     ClienteDeleteComponent,
     ClienteGuardarComponent,
     RequirementsListComponent,
-    ClienteEditComponent
+    ClienteEditComponent,
+    RequirementsEditComponent,
+    RequirementsSaveComponent
 
   ],
   imports: [
