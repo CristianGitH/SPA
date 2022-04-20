@@ -17,4 +17,17 @@ export class RequirementService {
   public getAll():Observable<any>{
     return this.httpClient.get(this.url);        
   }
+
+  public save(requirement: Requirement): Observable<any>{
+    return this.httpClient.post(this.url, requirement);
+  }
+
+  public edit(requirement: Requirement): Observable<any>{
+    return this.httpClient.put(this.url + requirement.RequirementID, requirement);
+  };
+
+  public getById(id: number): Observable<any> {
+    return this.httpClient.get(this.url + id)
+  };
+  
 }

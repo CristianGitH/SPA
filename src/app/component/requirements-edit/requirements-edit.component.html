@@ -1,0 +1,35 @@
+<div class='container'>
+    <h2>Editar Requerimientos</h2>
+
+    <div class="form-row" *ngIf="showMsg" >
+        <div class="alert alert-{{type}} col-md-12" role="alert" >
+            {{msg}}
+        </div>
+    </div>
+
+    <form #requirementsForm="ngForm" *ngIf="requirement">
+
+        <div class="form-row">
+                
+            <div class-md-4> 
+                <label>ID:</label>
+                <input type="text" id="RequirementID" name="RequirementID" placeholder="Enter the costumer ID" class="form-control" 
+                #RequirementID [(ngModel)] = "requirement.RequirementID" readonly />
+            </div>
+
+            <div class-md-4> 
+                <label>Titulo:</label>
+                <input type="text" id="Title" name="Title" placeholder="Enter the costumer Title" class="form-control" 
+                #Title [(ngModel)] = "requirement.Title"/>
+            </div>
+
+        </div>
+
+        <br>
+        <button class="btn btn-outline-primary btn-sm" (click)="edit()">Edit</button>
+        <!-- <button class="btn btn-outline-primary btn-sm" (click)="save()">Save</button> -->
+        <a class = "btn btn-outline-primary btn-sm" [routerLink]="[ '/requirements-list' ]">Back</a>
+
+    </form>
+
+</div>

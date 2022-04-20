@@ -27,7 +27,7 @@ export class ClienteEditComponent implements OnInit {
 
   public getById(){
     let param = this.activatedRoutedRoute.params['_value'];
-    this.id=param.id
+    this.id=param.id;
 
     this.ClienteService.getById(this.id).subscribe(data => {
       this.cliente= data;
