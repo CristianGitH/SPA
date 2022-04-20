@@ -30,6 +30,18 @@
           #Cliente_id Cliente_id [(ngModel)]="cliente.Cliente_id" readonly />
       </div>
 
+      <div class="col-md-4">
+        <label>Nombre:</label>
+        <Input type="text" id="name" name="name" placeholder="Enter the name" class="form-control" #Nombre
+          [(ngModel)]="cliente.Nombre" />
+      </div>
+
+      <div class="col-md-4">
+        <label>Cliente:</label>
+        <Input type="text" id="lastname" name="lastname" placeholder="Enter the last name" class="form-control"
+          #Apellido [(ngModel)]="cliente.Apellido" />
+      </div>
+
     </div>
   </form>
 </div>
