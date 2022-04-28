@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Cliente } from 'src/app/domain/cliente';
+import { Customer } from 'src/app/domain/cliente';
 import { ClienteService } from 'src/app/service/cliente.service';
 import { Subscription } from 'rxjs';
 
@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class ClienteListaComponent implements OnInit, OnDestroy {
 
-  public cliente: Cliente[] = [];
+  public customer: Customer[] = [];
   public subClientes: Subscription = new Subscription;
 
   constructor(public clienteService: ClienteService ) { }
@@ -25,7 +25,7 @@ export class ClienteListaComponent implements OnInit, OnDestroy {
 
   getAll(){
     this.subClientes =  this.clienteService.getAll().subscribe(data=>{
-      this.cliente = data;
+      this.customer = data;
     });
   }
 

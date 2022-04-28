@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Cliente } from 'src/app/domain/cliente';
+import { Customer } from 'src/app/domain/cliente';
 import { ClienteService } from 'src/app/service/cliente.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ClienteService } from 'src/app/service/cliente.service';
 })
 export class ClienteGuardarComponent implements OnInit {
 
-  public cliente!: Cliente;
+  public customer!: Customer;
 
   public showMsg: boolean = false;
   public msg: string = '';
@@ -19,12 +19,12 @@ export class ClienteGuardarComponent implements OnInit {
   constructor(public clienteService: ClienteService, private router: Router) { }
 
   ngOnInit(): void {
-    this.cliente = new Cliente(0, '', '', '', '', '', '', 0);
+    this.customer = new Customer(0, '', '', '', '', '', '', 0);
   }
 
   public save(){
 
-    this.clienteService.save(this.cliente).subscribe(data => {
+    this.clienteService.save(this.customer).subscribe(data => {
       this.router.navigate(['/clientes-lista']);
     }, error => {
       console.log(error);

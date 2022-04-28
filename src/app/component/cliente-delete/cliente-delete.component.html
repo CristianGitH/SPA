@@ -20,22 +20,22 @@
     </div>
   </div>
 
-  <form #ClienteForm="ngForm" *ngIf="cliente">
+  <form #ClienteForm="ngForm" *ngIf="customer">
 
     <div class="Form-row">
       <div class="col-md-4">
         <label>ID:</label>
         <Input type="text" id="CustomerID" name="CustomerID" class="form-control" #CustomerID
-          [(ngModel)]="cliente.CustomerID" readonly />
+          [(ngModel)]="customer.CustomerID" readonly />
       </div>
       <div class="col-md-4">
         <label>Nombre:</label>
         <Input type="text" id="FirstName" name="FirstName" class="form-control" #FirstName
-          [(ngModel)]="cliente.FirstName" readonly />
+          [(ngModel)]="customer.FirstName" readonly />
       </div>
       <div class="col-md-4">
         <label>Apellido:</label>
-        <Input type="text" id="LastName" name="LastName" class="form-control" #LastName [(ngModel)]="cliente.LastName"
+        <Input type="text" id="LastName" name="LastName" class="form-control" #LastName [(ngModel)]="customer.LastName"
           readonly />
       </div>
     </div>
