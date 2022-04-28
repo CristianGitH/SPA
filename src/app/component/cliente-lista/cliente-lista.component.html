@@ -1,45 +1,39 @@
 <div class="container">
-    <br>
-    <h1>Clientes</h1>
-    <hr class="my-4">
-    <a class="btn btn-sm btn-outline-success"[routerLink]="[ '/clientes-save' ]" >Crear</a>
-    <br>
+  <br>
+  <h1>Clientes</h1>
+  <hr class="my-4">
+  <a class="btn btn-sm btn-outline-success" [routerLink]="[ '/cliente-guardar' ]">Crear</a>
+  <br>
 
-    <table class="table table-bordered">
-      <tr>
-            <td> Cliente_id </td>
-            <td> Nombre </td>
-            <td> Segundo nombre </td>
-            <td> Apellido </td>
-            <td> Segundo apellido </td>
-            <td> Pais </td>
-            <td> Ciudad </td>
-            <td> Direccion </td>
-            <td> Correo </td>
-            <td> Edad </td>
-            <td></td>
-      </tr>
-      <tr *ngFor="let item of cliente">
-        <td>{{ item.Cliente_id   }}</td>
-        <td>{{ item.Nombre }}</td>
-        <td>{{ item.Segundo_nombre }}</td>
-        <td>{{ item.Apellido }}</td>
-        <td>{{ item.Segundo_apellido }}</td>
-        <td>{{ item.Pais }}</td>
-        <td>{{ item.Ciudad }}</td>
-        <td>{{ item.Direccion }}</td>
-        <td>{{ item.Correo }}</td>
-        <td>{{ item.Edad }}</td>
-        <td>
-          <div class="btn-group" role="group">
-            <a class="btn btn-sm btn-outline-warning" [routerLink]="[ '/clientes-edit', item.Cliente_id ]">Edit</a>
-          </div>
-        </td>
-        <td>
-          <div class="btn-group" role="group">
-            <a class="btn btn-sm btn-outline-danger" [routerLink]="[ '/cliente-delete', item.Cliente_id ]">Delete</a>
-          </div>
-        </td>
-      </tr>
-    </table>
-  </div>
+  <table class="table table-bordered">
+    <tr>
+      <td> Id </td>
+      <td> Nombre </td>
+      <td> Apellido </td>
+      <td> Número de identificación </td>
+      <td> Telefono </td>
+      <td> Correo electrónico </td>
+      <td> Dirección </td>
+      <td> Tipo de documento </td>
+      <td> Acciones </td>
+    </tr>
+    <tr *ngFor="let item of cliente">
+      <td>{{ item.CustomerID }}</td>
+      <td>{{ item.FirstName }}</td>
+      <td>{{ item.LastName }}</td>
+      <td>{{ item.Identification }}</td>
+      <td>{{ item.Telephone }}</td>
+      <td>{{ item.Email }}</td>
+      <td>{{ item.Direction }}</td>
+      <td>{{ item.DocumentTypeID }}</td>
+      <td>
+        <div class="btn-group" role="group">
+          <a class="btn btn-sm btn-outline-warning" [routerLink]="[ '/clientes-edit', item.CustomerID ]">Edit</a>
+        </div>
+        <div class="btn-group" role="group">
+          <a class="btn btn-sm btn-outline-danger" [routerLink]="[ '/cliente-delete', item.CustomerID ]">Delete</a>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -23,25 +23,21 @@
   <form #ClienteForm="ngForm" *ngIf="cliente">
 
     <div class="Form-row">
-
       <div class="col-md-4">
         <label>ID:</label>
-        <Input type="text" id="Cliente_id" name="ClienteID" placeholder="Enter the Client ID" class="form-control"
-          #Cliente_id Cliente_id [(ngModel)]="cliente.Cliente_id" readonly />
+        <Input type="text" id="CustomerID" name="CustomerID" class="form-control" #CustomerID
+          [(ngModel)]="cliente.CustomerID" readonly />
       </div>
-
       <div class="col-md-4">
         <label>Nombre:</label>
-        <Input type="text" id="name" name="name" placeholder="Enter the name" class="form-control" #Nombre
-          [(ngModel)]="cliente.Nombre" />
+        <Input type="text" id="FirstName" name="FirstName" class="form-control" #FirstName
+          [(ngModel)]="cliente.FirstName" readonly />
       </div>
-
       <div class="col-md-4">
-        <label>Cliente:</label>
-        <Input type="text" id="lastname" name="lastname" placeholder="Enter the last name" class="form-control"
-          #Apellido [(ngModel)]="cliente.Apellido" />
+        <label>Apellido:</label>
+        <Input type="text" id="LastName" name="LastName" class="form-control" #LastName [(ngModel)]="cliente.LastName"
+          readonly />
       </div>
-
     </div>
   </form>
 </div>
