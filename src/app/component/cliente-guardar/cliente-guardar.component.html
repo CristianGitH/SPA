@@ -5,57 +5,48 @@
       {{msg}}
     </div>
   </div>
-
   <form #clienteForm="ngForm">
-    <div class="form-row">
-      <div class="col-md-4">
+    <div class="row">
+      <div class="col">
         <label>Nombre:</label>
-        <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Escribe el nombre"
-        #Nombre [(ngModel)] = "cliente.Nombre"/>
+        <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="Nombres" #FirstName
+          [(ngModel)]="cliente.FirstName" />
       </div>
-      <div class="col-md-4">
-        <label>Segundo nombre:</label>
-        <input type="text" class="form-control" id="Segundo_nombre" name="Segundo_nombre" placeholder="Escribe el segundo nombre"
-        #Segundo_nombre [(ngModel)] = "cliente.Segundo_nombre"/>
-      </div>
-      <div class="col-md-4">
+      <div class="col">
         <label>Apellido:</label>
-        <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Escribe el Apellido"
-        #Apellido [(ngModel)] = "cliente.Apellido"/>
+        <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Apellidos" #LastName
+          [(ngModel)]="cliente.LastName" />
       </div>
     </div>
-    <div class="form-row">
-      <div class="col-md-4">
-        <label>Segundo apellido:</label>
-        <input type="text" class="form-control" id="Segundo_apellido" name="Segundo_apellido" placeholder="Escribe el Segundo apellido"
-        #Segundo_apellido [(ngModel)] = "cliente.Segundo_apellido"/>
+    <br />
+    <div class="row">
+      <div class="col">
+        <label>Número de identificación:</label>
+        <input type="text" class="form-control" id="Identification" name="Identification"
+          placeholder="Número de identificación" #Identification [(ngModel)]="cliente.Identification" />
       </div>
-      <div class="col-md-4">
-        <label>Pais:</label>
-        <input type="text" class="form-control" id="Pais" name="Pais" placeholder="Escribe el Pais"
-        #Pais [(ngModel)] = "cliente.Pais"/>
+      <div class="col">
+        <label>Telefono:</label>
+        <input type="text" class="form-control" id="Telephone" name="Telephone" placeholder="Número de telefono"
+          #Telephone [(ngModel)]="cliente.Telephone" />
       </div>
-      <div class="col-md-4">
-        <label>Ciudad:</label>
-        <input type="text" class="form-control" id="Ciudad" name="Ciudad" placeholder="Escribe la Ciudad"
-        #Ciudad [(ngModel)] = "cliente.Ciudad"/>
+      <div class="col">
+        <label>Correo electrónico:</label>
+        <input type="text" class="form-control" id="Email" name="Email" placeholder="Correo electrónico" #Email
+          [(ngModel)]="cliente.Email" />
       </div>
     </div>
-    <div class="form-row">
-      <div class="col-md-4">
-        <label>Direccion:</label>
-        <input type="text" class="form-control" id="Direccion" name="Direccion" placeholder="Escribe la Direccion"
-        #Direccion [(ngModel)] = "cliente.Direccion"/>
+    <br />
+    <div class="row">
+      <div class="col">
+        <label>Dirección:</label>
+        <input type="text" class="form-control" id="Direction" name="Direction" placeholder="Direccion" #Direction
+          [(ngModel)]="cliente.Direction" />
       </div>
-      <div class="col-md-4">
-        <label>Correo:</label>
-        <input type="email" class="form-control" id="Correo" name="Correo" placeholder="Escribe el Correo"
-        #Correo [(ngModel)] = "cliente.Correo"/>
-      </div>
-      <div class="col-md-4">
-        <label>Edad:</label>
-        <input type="number" class="form-control" id="Edad" name="Edad" placeholder="Escribe la Edad"
-        #Edad [(ngModel)] = "cliente.Edad"/>
+      <div class="col">
+        <label>Tipo de documento:</label>
+        <input type="number" class="form-control" id="DocumentTypeID" name="DocumentTypeID" placeholder="Selecciona"
+          #DocumentTypeID [(ngModel)]="cliente.DocumentTypeID" />
       </div>
     </div>
     <br />

@@ -19,12 +19,10 @@ export class ClienteGuardarComponent implements OnInit {
   constructor(public clienteService: ClienteService, private router: Router) { }
 
   ngOnInit(): void {
-    this.cliente = new Cliente(0, '', '', '', '', '', '', '', '', 0);
+    this.cliente = new Cliente(0, '', '', '', '', '', '', 0);
   }
 
   public save(){
-
-    console.log(this.cliente)
 
     this.clienteService.save(this.cliente).subscribe(data => {
       this.router.navigate(['/clientes-lista']);

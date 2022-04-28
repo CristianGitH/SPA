@@ -27,8 +27,8 @@ export class ClienteDeleteComponent implements OnInit {
 
   public getById() {
 
-    let param = this.activatedRoute.snapshot.paramMap.get('id');    
-    this.id = Number(param); 
+    let param = this.activatedRoute.snapshot.paramMap.get('id');
+    this.id = Number(param);
 
     this.clienteService.getById(this.id).subscribe(data => {
       this.cliente = data;
@@ -37,7 +37,7 @@ export class ClienteDeleteComponent implements OnInit {
 
   public delete(){
 
-    this.clienteService.delete(this.cliente.Cliente_id).subscribe(data => {
+    this.clienteService.delete(this.cliente.CustomerID).subscribe(data => {
       this.router.navigate(['/clientes-lista']);
     }, error => {
       console.log(error);
