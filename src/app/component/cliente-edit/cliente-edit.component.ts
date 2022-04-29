@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Cliente } from 'src/app/domain/cliente';
+import { Customer } from 'src/app/domain/cliente';
 import { ClienteService } from 'src/app/service/cliente.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ClienteService } from 'src/app/service/cliente.service';
 })
 export class ClienteEditComponent implements OnInit {
   public id!: number;
-  public cliente!: Cliente;
+  public customer!: Customer;
 
   public showMsg: boolean = false;
   public msg!: string;
@@ -30,14 +30,14 @@ export class ClienteEditComponent implements OnInit {
     this.id=param.id;
 
     this.ClienteService.getById(this.id).subscribe(data => {
-      this.cliente= data;
+      this.customer= data;
     });
   }
 
   public edit(){
-    console.log(this.cliente)
+    console.log(this.customer)
 
-    this.ClienteService.edit(this.cliente).subscribe(data => {
+    this.ClienteService.edit(this.customer).subscribe(data => {
       this.router.navigate(['/clientes-lista']);
     }, error => {
 

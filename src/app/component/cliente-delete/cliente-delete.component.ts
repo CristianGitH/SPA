@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Cliente } from 'src/app/domain/cliente';
+import { Customer } from 'src/app/domain/cliente';
 import { ClienteService } from 'src/app/service/cliente.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { ClienteService } from 'src/app/service/cliente.service';
 export class ClienteDeleteComponent implements OnInit {
 
   public id: number = 0;
-  public cliente!: Cliente;
+  public customer!: Customer;
 
   public showMsg: boolean = false;
   public msg: string = '';
@@ -31,13 +31,13 @@ export class ClienteDeleteComponent implements OnInit {
     this.id = Number(param);
 
     this.clienteService.getById(this.id).subscribe(data => {
-      this.cliente = data;
+      this.customer = data;
     });
   }
 
   public delete(){
 
-    this.clienteService.delete(this.cliente.CustomerID).subscribe(data => {
+    this.clienteService.delete(this.customer.CustomerID).subscribe(data => {
       this.router.navigate(['/clientes-lista']);
     }, error => {
       console.log(error);

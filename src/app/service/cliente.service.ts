@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Cliente } from '../domain/cliente';
+import { Customer } from '../domain/cliente';
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +10,7 @@ export class ClienteService {
   public url: string;
 
   constructor(public httpClient: HttpClient) {
-    this.url = './assets/Customers.json';
+    this.url = 'https://api-arq.azurewebsites.net/api/Customer';
   }
 
   public getAll():Observable<any>{
@@ -27,11 +27,11 @@ export class ClienteService {
     return this.httpClient.delete(this.url + id);
   }
 
-  public save(cliente: Cliente): Observable<any>{
+  public save(cliente: Customer): Observable<any>{
     return this.httpClient.post(this.url, cliente)
   }
 
-  public edit(cliente: Cliente): Observable<any>{
+  public edit(cliente: Customer): Observable<any>{
     return this.httpClient.put(this.url + cliente.CustomerID, cliente);
   };
 
