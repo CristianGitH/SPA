@@ -1,22 +1,33 @@
 <div class="container">
-    <h1>Requerimientos</h1>
+   <h1>Requerimientos</h1>
 
-    <a class="btn btn-sm btn-outline-sucess" [routerLink]="[ '/requirement-save' ]">Create</a>
-    <br>
-    <table class="table table-bordered">
-       <tr>
-            <td>Id</td>
-            <td>Title</td>
-            <td></td>
-       </tr>
-       <tr *ngFor="let item of requirement">
-          <td>{{item.RequirementID}}</td>
-          <td>{{item.Title}}</td>
-          <td>
-              <div class="btn-group" role="group">
-                 <a class="btn btn-sm btn-outline-warning" [routerLink]="[ '/requirements-edit', item.RequirementID ]">Edit</a>
-              </div>
-          </td>
-       </tr>
-    </table>
+   <a class="btn btn-sm btn-outline-sucess" [routerLink]="[ '/requirement-save' ]">Create</a>
+   <br>
+   <table class="table table-bordered">
+      <tr>
+         <td>Id</td>
+         <td>Reach</td>
+         <td>Application Date</td>
+         <td>Development Days</td>
+         <td>Development Date</td>
+         <td>Testing Date</td>
+         <td></td>
+      </tr>
+      <tr *ngFor="let item of requirement">
+         <td>{{item.RequirementID}}</td>
+         <td>{{item.Reach}}</td>
+         <td>{{item.ApplicationDate}}</td>
+         <td>{{item.DevelopmentDays}}</td>
+         <td>{{item.DevelopmentDate}}</td>
+         <td>{{item.TestingDate}}</td>
+         <td>
+            <div class="btn-group" role="group">
+               <a class="btn btn-sm btn-outline-warning"
+                  [routerLink]="[ '/requirements-edit', item.RequirementID ]">Edit</a>
+               <a class="btn btn-sm btn-outline-danger"
+                  [routerLink]="[ '/requirements-delete', item.RequirementID ]">Delete</a>
+            </div>
+         </td>
+      </tr>
+   </table>
 </div>

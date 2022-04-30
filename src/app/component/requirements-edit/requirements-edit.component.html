@@ -8,28 +8,22 @@
     </div>
 
     <form #requirementsForm="ngForm" *ngIf="requirement">
-
         <div class="form-row">
-                
             <div class-md-4> 
                 <label>ID:</label>
                 <input type="text" id="RequirementID" name="RequirementID" placeholder="Enter the costumer ID" class="form-control" 
                 #RequirementID [(ngModel)] = "requirement.RequirementID" readonly />
             </div>
-
-            <div class-md-4> 
-                <label>Titulo:</label>
-                <input type="text" id="Title" name="Title" placeholder="Enter the costumer Title" class="form-control" 
-                #Title [(ngModel)] = "requirement.Title"/>
+            <div class-md-4>  
+                <label>Reach:</label>
+                <input type="text" id="Reach" name="Reach" placeholder="Enter the costumer Title" class="form-control" 
+                #Title [(ngModel)] = "requirement.Reach"/>
             </div>
-
         </div>
-
         <br>
-        <button class="btn btn-outline-primary btn-sm" (click)="edit()">Edit</button>
-        <!-- <button class="btn btn-outline-primary btn-sm" (click)="save()">Save</button> -->
-        <a class = "btn btn-outline-primary btn-sm" [routerLink]="[ '/requirements-list' ]">Back</a>
-
+        <div class="btn-group" role="group">
+            <button class="btn btn-outline-primary btn-sm" (click)="edit()">Edit</button>
+            <a class = "btn btn-outline-primary btn-sm" [routerLink]="[ '/requirements-list' ]">Back</a>
+        </div>
     </form>
-
 </div>

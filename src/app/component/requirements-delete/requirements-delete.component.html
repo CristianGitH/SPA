@@ -1,0 +1,63 @@
+<div class='container'>
+    <h2>Eliminar Requerimientos</h2>
+
+    <div class="form-row" *ngIf="!showMsg">
+        <div class="alert alert-danger col-md-12" role="alert">
+            Are You Sure?
+            <br>
+            <button class="btn btn-outline-danger btn-sm" (click)="delete()">Delete</button>
+            <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/requirements-list' ]">Back</a>
+            <div class="btn-group" role="group"></div>
+        </div>
+    </div>
+
+
+    <div class="form-row" *ngIf="showMsg">
+        <div class="alert alert-{{type}} col-md-12" role="alert">
+            {{msg}}
+            <br>
+            <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/requirements-list' ]">Back</a>
+        </div>
+    </div>
+
+    <form #requirementsForm="ngForm" *ngIf="requirementID">
+
+        <div class="form-row">
+
+            <div class-md-4>
+                <label>RequirementID:</label>
+                <input type="text" id="RequirementID" name="RequirementID" class="form-control" #RequirementID
+                    [(ngModel)]="requirementID" readonly />
+            </div>
+            <div class-md-4>
+                <label>Reach:</label>
+                <input type="text" id="Reach" name="Reach" class="form-control" #Title [(ngModel)]="reach" readonly />
+            </div>
+            <div class-md-4>
+                <label>Application Date:</label>
+                <input type="text" id="ApplicationDate" name="ApplicationDate" class="form-control" #Title
+                    [(ngModel)]="applicationDate" readonly />
+            </div>
+            <div class-md-4>
+                <label>Development Date:</label>
+                <input type="text" id="DevelopmentDate" name="DevelopmentDate" class="form-control" #Title
+                    [(ngModel)]="developmentDate" readonly />
+            </div>
+            <div class-md-4>
+                <label>Development Days:</label>
+                <input type="text" id="DevelopmentDays" name="DevelopmentDays" class="form-control" #Title
+                    [(ngModel)]="developmentDays" readonly />
+            </div>
+            <div class-md-4>
+                <label>Development Date:</label>
+                <input type="text" id="DevelopmentDate" name="DevelopmentDate" class="form-control" #Title
+                    [(ngModel)]="developmentDate" readonly />
+            </div>
+            <div class-md-4>
+                <label>Testing Date:</label>
+                <input type="text" id="TestingDate" name="TestingDate" class="form-control" #Title
+                    [(ngModel)]="testingDate" readonly />
+            </div>
+        </div>
+    </form>
+</div>

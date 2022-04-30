@@ -11,7 +11,7 @@ export class RequirementService {
   public url: string;
 
   constructor(public httpClient: HttpClient) { 
-    this.url = './assets/Requirements.json';
+    this.url = 'https://api-arq.azurewebsites.net/api/Requirement';
   }
 
   public getAll():Observable<any>{
@@ -28,6 +28,10 @@ export class RequirementService {
 
   public getById(id: number): Observable<any> {
     return this.httpClient.get(this.url + id)
+  };
+
+  public delete(id: number) {
+    return this.httpClient.delete(this.url + `/${id}`)
   };
   
 }
