@@ -8,6 +8,7 @@ import { ProyectosSaveComponent } from './component/proyectos-save/proyectos-sav
 import { RequirementsListComponent } from './component/requirements-list/requirements-list.component';
 import { ClienteEditComponent } from './component/cliente-edit/cliente-edit.component';
 import { RequirementsEditComponent } from './component/requirements-edit/requirements-edit.component';
+import { RequirementsDeleteComponent } from './component/requirements-delete/requirements-delete.component';
 const routes: Routes = [
   { path: 'proyectos-list', component: ProyectosListaComponent},
   { path: 'proyectos-save', component: ProyectosSaveComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'cliente-guardar', component: ClienteGuardarComponent},
   { path: 'requirements-list', component: RequirementsListComponent},
   { path: 'clientes-edit/:id', component: ClienteEditComponent},
-  { path: 'requirements-edit/:id', component: RequirementsEditComponent}
+  { path: 'requirements-edit/:id', component: RequirementsEditComponent},
+  { path: 'requirements-delete/:id', component: RequirementsDeleteComponent}
 ];
 
 @NgModule({

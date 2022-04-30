@@ -1,4 +1,8 @@
 export class Requirement {
     constructor(public RequirementID: number,
-        public Title: string){}
+        public Reach: string,
+        public ApplicationDate: Date,
+        public DevelopmentDays: number,
+        public DevelopmentDate: Date,
+        public TestingDate: Date){}
 }
