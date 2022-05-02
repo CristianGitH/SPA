@@ -26,6 +26,6 @@ export class ProyectosService {
   }
 
   public edit(project: Project): Observable<any>{
-    return this.httpClient.put(`${this.url}/${project.ProjectId}`, project);
+    return this.httpClient.put(`${this.url}/${project.ProjectID}`, project);
   }
 }

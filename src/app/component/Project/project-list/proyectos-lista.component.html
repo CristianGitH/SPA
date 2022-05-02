@@ -14,16 +14,16 @@
       <td>Acciones</td>
     </tr>
     <tr *ngFor="let item of projects">
-      <td>{{ item.ProjectId }}</td>
-      <td>{{ item.CustomerId }}</td>
-      <td>{{ item.StateId }}</td>
+      <td>{{ item.ProjectID }}</td>
+      <td>{{ item.CustomerID }}</td>
+      <td>{{ item.StateID }}</td>
       <td>{{ item.Names }}</td>
       <td>{{ item.StartDate }}</td>
       <td>{{ item.FinishDate }}</td>
       <td>{{ item.Price }}</td>
       <td>{{ item.AmountHours }}</td>
       <td>
-        <a class="btn btn-sm btn-outline-warning" [routerLink]="[ '/project-edit', item.ProjectId ]">Editar</a>
+        <a class="btn btn-sm btn-outline-warning" [routerLink]="[ '/project-edit', item.ProjectID ]">Editar</a>
       </td>
     </tr>
   </table>

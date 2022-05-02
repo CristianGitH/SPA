@@ -1,8 +1,8 @@
 export class Project {
   constructor(
-    public CustomerId: number,
-    public StateId: number,
-    public ProjectId: number,
+    public CustomerID: number,
+    public StateID: number,
+    public ProjectID: number,
     public Names: string,
     public StartDate: Date,
     public FinishDate: Date,
