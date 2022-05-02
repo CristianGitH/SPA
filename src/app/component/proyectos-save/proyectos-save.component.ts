@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Proyectos } from 'src/app/domain/proyectos';
+import { Project } from 'src/app/domain/proyectos';
 import { ProyectosService } from 'src/app/service/management.service';
 
 @Component({
@@ -10,8 +10,7 @@ import { ProyectosService } from 'src/app/service/management.service';
 })
 export class ProyectosSaveComponent implements OnInit {
 
-
-  public proyecto!: Proyectos;
+  public project!: Project;
 
   public showMsg: boolean = false;
   public msg!: string;
@@ -21,13 +20,11 @@ export class ProyectosSaveComponent implements OnInit {
     private router: Router)  { }
 
   ngOnInit(): void {
-    this.proyecto = new Proyectos(0, '','','',);
+    this.project = new Project(0, 0, 0, '', new Date(), new Date(), 0, 0);
   }
     public save(){
 
-      console.log(this.proyecto);
-
-      this.proyectoService.save(this.proyecto).subscribe(data =>{
+      this.proyectoService.save(this.project).subscribe(data =>{
       this.router.navigate(['/proyectos-list']);
       }, error => {
         console.log(error);

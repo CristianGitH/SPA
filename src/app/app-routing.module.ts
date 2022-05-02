@@ -9,6 +9,8 @@ import { RequirementsListComponent } from './component/requirements-list/require
 import { ClienteEditComponent } from './component/cliente-edit/cliente-edit.component';
 import { RequirementsEditComponent } from './component/requirements-edit/requirements-edit.component';
 import { RequirementsDeleteComponent } from './component/requirements-delete/requirements-delete.component';
+import { ProjectEditComponent } from './component/project-edit/project-edit.component';
+
 const routes: Routes = [
   { path: 'proyectos-list', component: ProyectosListaComponent},
   { path: 'proyectos-save', component: ProyectosSaveComponent},
@@ -18,7 +20,8 @@ const routes: Routes = [
   { path: 'requirements-list', component: RequirementsListComponent},
   { path: 'clientes-edit/:id', component: ClienteEditComponent},
   { path: 'requirements-edit/:id', component: RequirementsEditComponent},
-  { path: 'requirements-delete/:id', component: RequirementsDeleteComponent}
+  { path: 'requirements-delete/:id', component: RequirementsDeleteComponent},
+  { path: 'project-edit/:id', component: ProjectEditComponent},
 ];
 
 @NgModule({

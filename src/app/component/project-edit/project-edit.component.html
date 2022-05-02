@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Crear Proyecto</h2>
+  <h2>Editar Proyecto</h2>
 
   <div class="form-row" *ngIf="showMsg">
     <div class="alert alert-{{type}} col-md-12" role="alert">
@@ -7,8 +7,13 @@
     </div>
   </div>
 
-  <form #ProyectoForm="ngForm">
+  <form #ProyectoForm="ngForm" ngIf="project">
     <div class="row">
+      <div class="col">
+        <label>Proyecto:</label>
+        <input type="text" class="form-control" id="ProjectId" name="ProjectId" #ProjectId
+          [(ngModel)]="project.ProjectId" readonly />
+      </div>
       <div class="col">
         <label>Estado:</label>
         <input type="text" class="form-control" id="StateId" name="StateId" placeholder="Estado" #StateId
@@ -48,8 +53,7 @@
           #AmountHours [(ngModel)]="project.AmountHours" />
       </div>
     </div>
-    <br />
     <br>
-    <button class="btn btn-outline-primary btn-sm" (click)="save()">Guardar</button>
+    <button class="btn btn-outline-primary btn-sm" (click)="edit()">Editar</button>
     <a class="btn btn-outline-primary btn-sm" [routerLink]="[ '/proyectos-list']">Volver</a>
   </form>

@@ -19,12 +19,12 @@ export class ClienteService {
 
   //Llamado por ID
   public getById(id: number): Observable<any> {
-    return this.httpClient.get(this.url + id)
+    return this.httpClient.get(`${this.url}/${id}`)
   };
 
   //Eliminar Cliente
   public delete(id: number) {
-    return this.httpClient.delete(this.url + id);
+    return this.httpClient.delete(`${this.url}/${id}`);
   }
 
   public save(cliente: Customer): Observable<any>{
@@ -32,7 +32,7 @@ export class ClienteService {
   }
 
   public edit(cliente: Customer): Observable<any>{
-    return this.httpClient.put(this.url + cliente.CustomerID, cliente);
+    return this.httpClient.put(`${this.url}/${cliente.CustomerID}`, cliente);
   };
 
 }

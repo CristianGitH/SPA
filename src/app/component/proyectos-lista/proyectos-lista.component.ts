@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Proyectos } from 'src/app/domain/proyectos';
+import { Project } from 'src/app/domain/proyectos';
 import { ProyectosService } from 'src/app/service/management.service';
 import { Subscription } from 'rxjs';
 
@@ -10,13 +10,13 @@ import { Subscription } from 'rxjs';
 })
 export class ProyectosListaComponent implements OnInit {
 
-  public proyectos!: Proyectos[];
-  public subProyectos!: Subscription;
+  public projects!: Project[];
+  public subProjects!: Subscription;
 
   constructor(public proyectoService: ProyectosService) { }
 
   ngOnDestroy(): void{
-    this.subProyectos!.unsubscribe();
+    this.subProjects!.unsubscribe();
 
   }
   ngOnInit(): void {
@@ -24,8 +24,8 @@ export class ProyectosListaComponent implements OnInit {
   }
 
   getAll(){
-    this.subProyectos! = this.proyectoService.getAll().subscribe(data =>{
-      this.proyectos! = data;
+    this.subProjects! = this.proyectoService.getAll().subscribe(data =>{
+      this.projects! = data;
     });
 
   }

@@ -18,6 +18,7 @@ import { ClienteEditComponent } from './component/cliente-edit/cliente-edit.comp
 import { RequirementsEditComponent } from './component/requirements-edit/requirements-edit.component';
 import { RequirementsSaveComponent } from './component/requirements-save/requirements-save.component';
 import { RequirementsDeleteComponent } from './component/requirements-delete/requirements-delete.component';
+import { ProjectEditComponent } from './component/project-edit/project-edit.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RequirementsDeleteComponent } from './component/requirements-delete/req
     ClienteEditComponent,
     RequirementsEditComponent,
     RequirementsSaveComponent,
-    RequirementsDeleteComponent
+    RequirementsDeleteComponent,
+    ProjectEditComponent
 
   ],
   imports: [

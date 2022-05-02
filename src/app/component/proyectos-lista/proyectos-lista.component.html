@@ -3,14 +3,28 @@
 
   <table class="table table-bordered">
     <tr>
-      <td>ID</td>
-      <td></td>
+      <td>Id del proyecto</td>
+      <td>Cliente</td>
+      <td>Estado</td>
+      <td>Nombre del proyecto</td>
+      <td>Fecha de inicio</td>
+      <td>Fecha final</td>
+      <td>Precio</td>
+      <td>Cantidad de horas</td>
+      <td>Acciones</td>
     </tr>
-    <tr *ngFor="let item of proyectos">
-      <td>{{ item.ProyectosID }}</td>
-      <td>{{ item.Titulo }}</td>
-      <td>{{ item.Cliente }}</td>
-      <td>{{ item.Requerimiento }}</td>
+    <tr *ngFor="let item of projects">
+      <td>{{ item.ProjectId }}</td>
+      <td>{{ item.CustomerId }}</td>
+      <td>{{ item.StateId }}</td>
+      <td>{{ item.Names }}</td>
+      <td>{{ item.StartDate }}</td>
+      <td>{{ item.FinishDate }}</td>
+      <td>{{ item.Price }}</td>
+      <td>{{ item.AmountHours }}</td>
+      <td>
+        <a class="btn btn-sm btn-outline-warning" [routerLink]="[ '/project-edit', item.ProjectId ]">Editar</a>
+      </td>
     </tr>
   </table>
 </div>
