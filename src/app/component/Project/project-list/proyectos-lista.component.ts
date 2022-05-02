@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from 'src/app/domain/proyectos';
-import { ProyectosService } from 'src/app/service/management.service';
+import { Project } from 'src/app/domain/project';
+import { ProyectosService } from 'src/app/service/project.service';
 import { Subscription } from 'rxjs';
 
 @Component({
