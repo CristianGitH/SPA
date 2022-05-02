@@ -13,23 +13,23 @@ export class ClienteEditComponent implements OnInit {
   public customer!: Customer;
 
   public showMsg: boolean = false;
-  public msg!: string;
-  public type!: string;
-  activatedRoutedRoute: any;
+  public msg: string = '';
+  public type: string = '';
+  public activatedRoute: any;
 
-  constructor(public ClienteService: ClienteService,
+  constructor(public clienteService: ClienteService,
     private router: Router,
-    private activatedRoute: ActivatedRoute) { }
+    activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getById();
   }
 
   public getById(){
-    let param = this.activatedRoutedRoute.params['_value'];
-    this.id=param.id;
+    let param = this.activatedRoute.params['_value'];  
+      this.id = param.id;
 
-    this.ClienteService.getById(this.id).subscribe(data => {
+    this.clienteService.getById(this.id).subscribe(data => {
       this.customer= data;
     });
   }
@@ -37,7 +37,7 @@ export class ClienteEditComponent implements OnInit {
   public edit(){
     console.log(this.customer)
 
-    this.ClienteService.edit(this.customer).subscribe(data => {
+    this.clienteService.edit(this.customer).subscribe(data => {
       this.router.navigate(['/clientes-lista']);
     }, error => {
 

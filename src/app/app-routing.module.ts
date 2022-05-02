@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule} from '@angular/router';
 import { ClienteDeleteComponent } from './component/Customer/customer-delete/cliente-delete.component';
 import { ClienteGuardarComponent } from './component/Customer/customer-save/cliente-guardar.component';
 import { ClienteListaComponent } from './component/Customer/customer-list/cliente-lista.component';
@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'cliente-delete/:id', component: ClienteDeleteComponent},
   { path: 'cliente-guardar', component: ClienteGuardarComponent},
   { path: 'requirements-list', component: RequirementsListComponent},
-  { path: 'clientes-edit/:id', component: ClienteEditComponent},
+  { path: 'cliente-edit/:id', component: ClienteEditComponent},
   { path: 'requirements-edit/:id', component: RequirementsEditComponent},
   { path: 'requirements-delete/:id', component: RequirementsDeleteComponent},
   { path: 'project-edit/:id', component: ProjectEditComponent},

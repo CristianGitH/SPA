@@ -1,61 +1,58 @@
-<div class='container'>
-  <h2>Editar Cliente</h2>
-
-  <div class="form-row" *ngIf="showMsg">
+<div class="container">
+  <br>
+  <h1>Editar Cliente</h1>
+  <hr class="my-4">
+  <div class="form-row" ngif="showMsg">
     <div class="alert alert-{{type}} col-md-12" role="alert">
       {{msg}}
     </div>
   </div>
-
-  <form #clienteForm="ngForm" *ngIf="customer">
-    <div class-md-4>
-      <label>ID:</label>
-      <input type="text" id="CustomerID" name="CustomerID" class="form-control"
-      #CustomerID [(ngModel)] = "customer.CustomerID" readonly />
-    </div>
-    <div class="form-row">
-      <div class="col-md-4">
+  <form #clienteForm="ngForm">
+    <div class="row">
+      <div class="col">
         <label>Nombre:</label>
         <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="Nombres" #FirstName
           [(ngModel)]="customer.FirstName" />
       </div>
-      <div class="col-md-4">
+      <div class="col">
         <label>Apellido:</label>
         <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Apellidos" #LastName
           [(ngModel)]="customer.LastName" />
       </div>
     </div>
-    <div class="form-row">
-      <div class="col-md-4">
+    <br />
+    <div class="row">
+      <div class="col">
         <label>Número de identificación:</label>
         <input type="text" class="form-control" id="Identification" name="Identification"
           placeholder="Número de identificación" #Identification [(ngModel)]="customer.Identification" />
       </div>
-      <div class="col-md-4">
+      <div class="col">
         <label>Telefono:</label>
         <input type="text" class="form-control" id="Telephone" name="Telephone" placeholder="Número de telefono"
           #Telephone [(ngModel)]="customer.Telephone" />
       </div>
-      <div class="col-md-4">
+      <div class="col">
         <label>Correo electrónico:</label>
         <input type="text" class="form-control" id="Email" name="Email" placeholder="Correo electrónico" #Email
           [(ngModel)]="customer.Email" />
       </div>
     </div>
-    <div class="form-row">
-      <div class="col-md-4">
+    <br />
+    <div class="row">
+      <div class="col">
         <label>Dirección:</label>
         <input type="text" class="form-control" id="Direction" name="Direction" placeholder="Direccion" #Direction
           [(ngModel)]="customer.Direction" />
       </div>
-      <div class="col-md-4">
+      <div class="col">
         <label>Tipo de documento:</label>
         <input type="number" class="form-control" id="DocumentTypeID" name="DocumentTypeID" placeholder="Selecciona"
           #DocumentTypeID [(ngModel)]="customer.DocumentTypeID" />
       </div>
     </div>
-    <br>
-    <button class="btn btn-outline-primary btn-sm" (click)="edit()">Edit</button>
-    <a class="btn btn-outline-primary btn-sm" [routerLink]="[ '/clientes-lista' ]">Back</a>
+    <br />
+    <button class="btn btn-sm btn-outline-success" (click)="edit()">Editar</button>
+    <a class="btn btn-outline-primary btn-sm" [routerLink]="['/clientes-lista']">Volver</a>
   </form>
 </div>
