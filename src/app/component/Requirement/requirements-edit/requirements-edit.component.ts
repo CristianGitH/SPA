@@ -19,7 +19,7 @@ export class RequirementsEditComponent implements OnInit {
   activatedRoutedRoute: any;
 
   constructor(public RequirementService: RequirementService,
-    private router: Router, 
+    private router: Router,
     private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -39,7 +39,7 @@ export class RequirementsEditComponent implements OnInit {
     console.log(this.requirement)
 
     this.RequirementService.edit(this.requirement).subscribe(data => {
-      this.router.navigate(['/requirements-list']);
+      this.router.navigate(['/requirement-list']);
     }, error => {
 
       console.log(error);

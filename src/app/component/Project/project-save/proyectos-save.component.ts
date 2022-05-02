@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Project } from 'src/app/domain/proyectos';
-import { ProyectosService } from 'src/app/service/management.service';
+import { Project } from 'src/app/domain/project';
+import { ProyectosService } from 'src/app/service/project.service';
 
 @Component({
   selector: 'app-proyectos-save',

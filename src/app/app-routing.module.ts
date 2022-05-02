@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClienteDeleteComponent } from './component/cliente-delete/cliente-delete.component';
-import { ClienteGuardarComponent } from './component/cliente-guardar/cliente-guardar.component';
-import { ClienteListaComponent } from './component/cliente-lista/cliente-lista.component';
-import { ProyectosListaComponent } from './component/proyectos-lista/proyectos-lista.component';
-import { ProyectosSaveComponent } from './component/proyectos-save/proyectos-save.component';
-import { RequirementsListComponent } from './component/requirements-list/requirements-list.component';
-import { ClienteEditComponent } from './component/cliente-edit/cliente-edit.component';
-import { RequirementsEditComponent } from './component/requirements-edit/requirements-edit.component';
-import { RequirementsDeleteComponent } from './component/requirements-delete/requirements-delete.component';
-import { ProjectEditComponent } from './component/project-edit/project-edit.component';
+import { ClienteDeleteComponent } from './component/Customer/customer-delete/cliente-delete.component';
+import { ClienteGuardarComponent } from './component/Customer/customer-save/cliente-guardar.component';
+import { ClienteListaComponent } from './component/Customer/customer-list/cliente-lista.component';
+import { ProyectosListaComponent } from './component/Project/project-list/proyectos-lista.component';
+import { ProyectosSaveComponent } from './component/Project/project-save/proyectos-save.component';
+import { RequirementsListComponent } from './component/Requirement/requirements-list/requirements-list.component';
+import { ClienteEditComponent } from './component/Customer/customer-edit/cliente-edit.component';
+import { RequirementsEditComponent } from './component/Requirement/requirements-edit/requirements-edit.component';
+import { RequirementsDeleteComponent } from './component/Requirement/requirements-delete/requirements-delete.component';
+import { ProjectEditComponent } from './component/Project/project-edit/project-edit.component';
 
 const routes: Routes = [
   { path: 'proyectos-list', component: ProyectosListaComponent},
