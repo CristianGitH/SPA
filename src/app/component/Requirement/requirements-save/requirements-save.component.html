@@ -1,1 +1,62 @@
-<p>requirements-save works!</p>
+<div class="container">
+    <br>
+    <h1 align="center">Crear Requerimiento</h1>
+    <hr class="my-4">
+    <div class="form-row" ngif="showMsg">
+      <div class="alert alert-{{type}} col-md-12" role="alert">
+        {{msg}}
+      </div>
+    </div>
+    <form #clienteForm="ngForm">
+      <div class="row">
+        <div class="col">
+          <label>Alcance:</label>
+          <input type="number" class="form-control" id="Alcance" name="Alcance" placeholder="Alcance" #Reach
+            [(ngModel)]="requirement.Reach" />
+        </div>
+        <div class="col">
+          <label>Proyecto Id:</label>
+          <input type="number" class="form-control" id="Id Proyecto" name="Id Proyecto" placeholder="Id Proyecto" #ProjectID
+            [(ngModel)]="requirement.ProjectID" />
+        </div>
+
+        <div class="col">
+          <label>Prioridad Id:</label>
+          <input type="number" class="form-control" id="Alcance" name="Alcance" placeholder="Alcance" #Reach
+            [(ngModel)]="requirement.PriorityID" />
+        </div>
+
+        <div class="col">
+          <label>Desarrollador Id:</label>
+          <input type="number" class="form-control" id="Desarrollador Id" name="Desarrollador Id" placeholder="Desarrollador Id" #DeveloperID
+            [(ngModel)]="requirement.DeveloperID" />
+        </div>
+        <div class="col">
+          <label>Fecha de aplicacion:</label>
+          <input type="date" class="form-control" id="Fecha de aplicacion" name="Fecha de aplicacion" placeholder="Fecha de aplicacion" #ApplicationDate
+            [(ngModel)]="requirement.ApplicationDate" />
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col">
+          <label>Días de desarrollo:</label>
+          <input type="number" class="form-control" id="Días de desarrollo" name="Días de desarrollo"
+            placeholder="Días de desarrollo" #DevelopmentDays [(ngModel)]="requirement.DevelopmentDays" />
+        </div>
+        <div class="col">
+          <label>Fecha de desarrollo:</label>
+          <input type="date" class="form-control" id="Fecha de desarrollo" name="Fecha de desarrollo" placeholder="Fecha de desarrollo"
+            #Telephone [(ngModel)]="requirement.DevelopmentDate" />
+        </div>
+        <div class="col">
+          <label>Fecha de prueba:</label>
+          <input type="date" class="form-control" id="Fecha de prueba" name="Fecha de prueba" placeholder="Fecha de prueba" #Email
+            [(ngModel)]="requirement.TestingDate" />
+        </div>
+      </div>
+      <br />
+      <button class="btn btn-sm btn-outline-success" (click)="save()">Guardar</button>
+      <a class="btn btn-outline-primary btn-sm" [routerLink]="['/requirements-list']">Volver</a>
+    </form>
+  </div>

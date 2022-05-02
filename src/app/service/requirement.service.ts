@@ -15,7 +15,7 @@ export class RequirementService {
   }
 
   public getAll():Observable<any>{
-    return this.httpClient.get(this.url);
+    return this.httpClient.get(`${this.url}/GetAll`);
   }
 
   public save(requirement: Requirement): Observable<any>{
@@ -33,5 +33,4 @@ export class RequirementService {
   public delete(id: number) {
     return this.httpClient.delete(`${this.url}/${id}`)
   };
-
 }
