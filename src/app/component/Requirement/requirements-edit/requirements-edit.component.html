@@ -1,29 +1,69 @@
 <div class='container'>
-    <h1 align="center">Editar Requerimientos</h1>
-
-    <div class="form-row" *ngIf="showMsg" >
-        <div class="alert alert-{{type}} col-md-12" role="alert" >
-            {{msg}}
-        </div>
+  <br>
+  <h1 align="center">Editar Requerimientos</h1>
+  <hr class="my-4">
+  <div class="form-row" *ngIf="showMsg">
+    <div class="alert alert-{{type}} col-md-12" role="alert">
+      {{msg}}
     </div>
+  </div>
+  <form #requirementsForm="ngForm" *ngIf="requirement">
+    <div class="row">
+      <div class="col">
+        <label>Requerimiento Id:</label>
+        <input type="number" class="form-control" id="RequirementID" name="RequirementID" readonly
+          #RequirementID [(ngModel)]="requirement.RequirementID" />
+      </div>
+      <div class="col">
+        <label>Alcance:</label>
+        <input type="number" class="form-control" id="Alcance" name="Alcance" placeholder="Alcance" #Reach
+          [(ngModel)]="requirement.Reach" />
+      </div>
+      <div class="col">
+        <label>Proyecto Id:</label>
+        <input type="number" class="form-control" id="Id Proyecto" name="Id Proyecto" placeholder="Id Proyecto"
+          #ProjectID [(ngModel)]="requirement.ProjectID" />
+      </div>
 
-    <form #requirementsForm="ngForm" *ngIf="requirement">
-        <div class="form-row">
-            <div class-md-4>
-                <label>ID:</label>
-                <input type="text" id="RequirementID" name="RequirementID" placeholder="Enter the costumer ID" class="form-control"
-                #RequirementID [(ngModel)] = "requirement.RequirementID" readonly />
-            </div>
-            <div class-md-4>
-                <label>Reach:</label>
-                <input type="text" id="Reach" name="Reach" placeholder="Enter the costumer Title" class="form-control"
-                #Title [(ngModel)] = "requirement.Reach"/>
-            </div>
-        </div>
-        <br>
-        <div class="btn-group" role="group">
-            <button class="btn btn-outline-primary btn-sm" (click)="edit()">Editar</button>
-            <a class = "btn btn-outline-primary btn-sm" [routerLink]="[ '/requirements-list' ]">Volver</a>
-        </div>
-    </form>
+      <div class="col">
+        <label>Prioridad Id:</label>
+        <input type="number" class="form-control" id="Alcance" name="Alcance" placeholder="Alcance" #Reach
+          [(ngModel)]="requirement.PriorityID" />
+      </div>
+
+      <div class="col">
+        <label>Desarrollador Id:</label>
+        <input type="number" class="form-control" id="Desarrollador Id" name="Desarrollador Id"
+          placeholder="Desarrollador Id" #DeveloperID [(ngModel)]="requirement.DeveloperID" />
+      </div>
+      <div class="col">
+        <label>Fecha de aplicacion:</label>
+        <input type="date" class="form-control" id="Fecha de aplicacion" name="Fecha de aplicacion"
+          placeholder="Fecha de aplicacion" #ApplicationDate [(ngModel)]="requirement.ApplicationDate" />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col">
+        <label>Días de desarrollo:</label>
+        <input type="number" class="form-control" id="Días de desarrollo" name="Días de desarrollo"
+          placeholder="Días de desarrollo" #DevelopmentDays [(ngModel)]="requirement.DevelopmentDays" />
+      </div>
+      <div class="col">
+        <label>Fecha de desarrollo:</label>
+        <input type="date" class="form-control" id="Fecha de desarrollo" name="Fecha de desarrollo"
+          placeholder="Fecha de desarrollo" #Telephone [(ngModel)]="requirement.DevelopmentDate" />
+      </div>
+      <div class="col">
+        <label>Fecha de prueba:</label>
+        <input type="date" class="form-control" id="Fecha de prueba" name="Fecha de prueba"
+          placeholder="Fecha de prueba" #Email [(ngModel)]="requirement.TestingDate" />
+      </div>
+    </div>
+    <br>
+    <div class="btn-group" role="group">
+      <button class="btn btn-outline-primary btn-sm" (click)="edit()">Editar</button>
+      <a class="btn btn-outline-primary btn-sm" [routerLink]="[ '/requirements-list' ]">Volver</a>
+    </div>
+  </form>
 </div>

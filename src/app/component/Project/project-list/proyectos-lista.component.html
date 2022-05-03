@@ -1,6 +1,10 @@
 <div class="container">
+  <br>
   <h1 align="center">Proyectos</h1>
-
+  <hr class="my-4">
+  <a class="btn btn-sm btn-outline-success" [routerLink]="[ '/proyectos-save' ]">Crear</a>
+  <br>
+  <br>
   <table class="table table-bordered">
     <tr>
       <td>Id del proyecto</td>
@@ -23,7 +27,13 @@
       <td>{{ item.Price }}</td>
       <td>{{ item.AmountHours }}</td>
       <td>
-        <a class="btn btn-sm btn-outline-warning" [routerLink]="[ '/project-edit', item.ProjectID ]">Editar</a>
+        <div class="btn-group" role="group">
+          <a class="btn btn-sm btn-outline-warning" [routerLink]="[ '/project-edit', item.ProjectID ]">Editar</a>
+        </div>
+        <div class="btn-group" role="group">
+          <a class="btn btn-sm btn-outline-danger"
+            [routerLink]="[ '/project-delete', item.ProjectID ]">Eliminar</a>
+        </div>
       </td>
     </tr>
   </table>

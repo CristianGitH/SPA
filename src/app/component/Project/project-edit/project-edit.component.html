@@ -1,12 +1,12 @@
 <div class="container">
+  <br>
   <h1 align="center">Editar Proyecto</h1>
-
+  <hr class="my-4">
   <div class="form-row" *ngIf="showMsg">
     <div class="alert alert-{{type}} col-md-12" role="alert">
       {{msg}}
     </div>
   </div>
-
   <form #ProyectoForm="ngForm" *ngIf="project">
     <div class="row">
       <div class="col">
