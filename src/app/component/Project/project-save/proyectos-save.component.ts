@@ -29,7 +29,7 @@ export class ProyectosSaveComponent implements OnInit {
       }, error => {
         console.log(error);
         this.showMsg = true;
-        this.msg = 'An error has ocurred in the procedure';
+        this.msg = error.error.Message;
         this.type = 'danger';
       });
     }

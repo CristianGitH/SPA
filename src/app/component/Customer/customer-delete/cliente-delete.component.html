@@ -3,7 +3,7 @@
 
   <div class="form-row" *ngIf="!showMsg">
     <div class="alert alert-danger col-md-12" role="alert">
-      Are You Sure?
+      ¿Está seguro?
       <br>
       <div class="btn-group" role="group">
         <button class="btn btn-outline-danger btn-sm" (click)="delete()">Eliminar</button>
@@ -21,22 +21,21 @@
   </div>
 
   <form #ClienteForm="ngForm" *ngIf="customer">
-
-    <div class="Form-row">
-      <div class="col-md-4">
+    <div class="row">
+      <div class="col">
         <label>ID:</label>
-        <Input type="text" id="CustomerID" name="CustomerID" class="form-control" #CustomerID
-          [(ngModel)]="customer.CustomerID" readonly />
+        <input type="text" class="form-control" id="CustomerID" name="CustomerID" placeholder="ID" #CustomerID
+          [(ngModel)]="customer.CustomerID" readonly/>
       </div>
-      <div class="col-md-4">
+      <div class="col">
         <label>Nombre:</label>
-        <Input type="text" id="FirstName" name="FirstName" class="form-control" #FirstName
-          [(ngModel)]="customer.FirstName" readonly />
+        <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="Nombres" #FirstName
+          [(ngModel)]="customer.FirstName" readonly/>
       </div>
-      <div class="col-md-4">
+      <div class="col">
         <label>Apellido:</label>
-        <Input type="text" id="LastName" name="LastName" class="form-control" #LastName [(ngModel)]="customer.LastName"
-          readonly />
+        <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Apellidos" #LastName
+          [(ngModel)]="customer.LastName" readonly/>
       </div>
     </div>
   </form>

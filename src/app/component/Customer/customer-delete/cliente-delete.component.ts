@@ -16,7 +16,7 @@ export class ClienteDeleteComponent implements OnInit {
   public showMsg: boolean = false;
   public msg: string = '';
   public type: string = '';
-  activatedRouteouteouteatedRoute: any;
+
   constructor(public clienteService: ClienteService,
     private router: Router,
     private activatedRoute: ActivatedRoute){}
@@ -42,7 +42,7 @@ export class ClienteDeleteComponent implements OnInit {
     }, error => {
       console.log(error);
       this.showMsg = true;
-      this.msg = 'An error has ocurred in the procedure';
+      this.msg = error.error.Message;
       this.type = 'danger';
     });
   }

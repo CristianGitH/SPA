@@ -15,19 +15,18 @@ export class ClienteEditComponent implements OnInit {
   public showMsg: boolean = false;
   public msg: string = '';
   public type: string = '';
-  public activatedRoute: any;
 
   constructor(public clienteService: ClienteService,
     private router: Router,
-    activatedRoute: ActivatedRoute) { }
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getById();
   }
 
   public getById(){
-    let param = this.activatedRoute.params['_value'];  
-      this.id = param.id;
+    let param = this.activatedRoute.snapshot.paramMap.get('id');
+    this.id = Number(param);
 
     this.clienteService.getById(this.id).subscribe(data => {
       this.customer= data;
@@ -43,7 +42,7 @@ export class ClienteEditComponent implements OnInit {
 
       console.log(error);
       this.showMsg = true;
-      this.msg = 'An error has ocurred in the procedure';
+      this.msg = error.error.Message;
       this.type = 'danger';
     });
   }

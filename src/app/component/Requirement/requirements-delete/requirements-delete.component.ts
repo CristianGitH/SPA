@@ -10,45 +10,38 @@ import { RequirementService } from 'src/app/service/requirement.service';
 })
 export class RequirementsDeleteComponent implements OnInit {
 
-  public requirementID!: number;
-  public reach!: string;
-  public applicationDate!: Date;
-  public developmentDays!: number;
-  public developmentDate!: Date;
-  public testingDate!: Date;
-  public Requirement!: Requirement;
-
+  public id!: number;
+  public requirement!: Requirement;
 
   public showMsg: boolean = false;
   public msg!: string;
   public type!: string;
-  activatedRoutedRoute: any;
 
   constructor(public RequirementService: RequirementService,
-    private router: Router, 
+    private router: Router,
     private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.getById();
   }
   public getById(){
-    let param = this.activatedRoutedRoute.params['_value'];
-    this.requirementID=param.id;
+    let param = this.activatedRoute.snapshot.paramMap.get('id');
+    this.id = Number(param);
 
-    this.RequirementService.getById(this.requirementID).subscribe(data => {
-      this.requirementID= data;
+    this.RequirementService.getById(this.id).subscribe(data => {
+      this.requirement= data;
     });
   }
 
   public delete(){
-    
-    this.RequirementService.delete(this.Requirement.RequirementID).subscribe(data => {
+
+    this.RequirementService.delete(this.requirement.RequirementID).subscribe(data => {
       this.router.navigate(['/requirements-list']);
     }, error => {
 
       console.log(error);
       this.showMsg = true;
-      this.msg = 'An error has ocurred in the procedure';
+      this.msg = error.error.Message;
       this.type = 'danger';
     });
   }

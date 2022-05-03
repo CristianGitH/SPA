@@ -1,35 +1,36 @@
 <div class="container">
-   <br>
-   <h1 align="center">Requerimientos</h1>
-   <hr class="my-4">
-   <a class="btn btn-sm btn-outline-success" [routerLink]="[ '/requirements-save' ]">Crear</a>
-   <br>
-   <br>
-   <table class="table table-bordered">
-      <tr>
-         <td>Id</td>
-         <td>Reach</td>
-         <td>Application Date</td>
-         <td>Development Days</td>
-         <td>Development Date</td>
-         <td>Testing Date</td>
-         <td></td>
-      </tr>
-      <tr *ngFor="let item of requirement">
-         <td>{{item.RequirementID}}</td>
-         <td>{{item.Reach}}</td>
-         <td>{{item.ApplicationDate}}</td>
-         <td>{{item.DevelopmentDays}}</td>
-         <td>{{item.DevelopmentDate}}</td>
-         <td>{{item.TestingDate}}</td>
-         <td>
-            <div class="btn-group" role="group">
-               <a class="btn btn-sm btn-outline-warning"
-                  [routerLink]="[ '/requirement-edit', item.RequirementID ]">Edit</a>
-               <a class="btn btn-sm btn-outline-danger"
-                  [routerLink]="[ '/requirement-delete', item.RequirementID ]">Delete</a>
-            </div>
-         </td>
-      </tr>
-   </table>
+  <br>
+  <h1 align="center">Requerimientos</h1>
+  <hr class="my-4">
+  <a class="btn btn-sm btn-outline-success" [routerLink]="[ '/requirements-save' ]">Crear</a>
+  <br>
+  <br>
+  <table class="table table-bordered">
+    <tr>
+      <td>Id</td>
+      <td>Alcance</td>
+      <td>Fecha de solicitud</td>
+      <td>Dias de desarrollo</td>
+      <td>Fecha de desarrollo</td>
+      <td>Fecha de pruebas</td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let item of requirement">
+      <td>{{item.RequirementID}}</td>
+      <td>{{item.Reach}}</td>
+      <td>{{item.ApplicationDate}}</td>
+      <td>{{item.DevelopmentDays}}</td>
+      <td>{{item.DevelopmentDate}}</td>
+      <td>{{item.TestingDate}}</td>
+      <td>
+        <div class="btn-group" role="group">
+          <a class="btn btn-sm btn-outline-warning" [routerLink]="[ '/requirements-edit', item.RequirementID ]">Editar</a>
+        </div>
+        <div class="btn-group" role="group">
+          <a class="btn btn-sm btn-outline-danger"
+            [routerLink]="[ '/requirements-delete', item.RequirementID ]">Eliminar</a>
+        </div>
+      </td>
+    </tr>
+  </table>
 </div>

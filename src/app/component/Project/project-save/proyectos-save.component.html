@@ -1,12 +1,12 @@
 <div class="container">
+  <br>
   <h1 align="center">Crear Proyecto</h1>
-
+  <hr class="my-4">
   <div class="form-row" *ngIf="showMsg">
     <div class="alert alert-{{type}} col-md-12" role="alert">
       {{msg}}
     </div>
   </div>
-
   <form #ProyectoForm="ngForm">
     <div class="row">
       <div class="col">
@@ -29,12 +29,12 @@
     <div class="row">
       <div class="col">
         <label>Fecha de inicio:</label>
-        <input type="text" class="form-control" id="StartDate" name="StartDate" #StartDate
+        <input type="date" class="form-control" id="StartDate" name="StartDate" #StartDate
           [(ngModel)]="project.StartDate" />
       </div>
       <div class="col">
         <label>Fecha final:</label>
-        <input type="text" class="form-control" id="FinishDate" name="FinishDate" #FinishDate
+        <input type="date" class="form-control" id="FinishDate" name="FinishDate" #FinishDate
           [(ngModel)]="project.FinishDate" />
       </div>
       <div class="col">
