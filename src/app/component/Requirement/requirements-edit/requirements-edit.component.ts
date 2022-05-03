@@ -16,7 +16,6 @@ export class RequirementsEditComponent implements OnInit {
   public showMsg: boolean = false;
   public msg!: string;
   public type!: string;
-  activatedRoutedRoute: any;
 
   constructor(public RequirementService: RequirementService,
     private router: Router,
@@ -27,8 +26,8 @@ export class RequirementsEditComponent implements OnInit {
   }
 
   public getById(){
-    let param = this.activatedRoutedRoute.params['_value'];
-    this.id=param.id;
+    let param = this.activatedRoute.snapshot.paramMap.get('id');
+    this.id = Number(param);
 
     this.RequirementService.getById(this.id).subscribe(data => {
       this.requirement= data;
@@ -44,7 +43,7 @@ export class RequirementsEditComponent implements OnInit {
 
       console.log(error);
       this.showMsg = true;
-      this.msg = 'An error has ocurred in the procedure';
+      this.msg = error.error.Message;
       this.type = 'danger';
     });
   }

@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <form #ProyectoForm="ngForm" ngIf="project">
+  <form #ProyectoForm="ngForm" *ngIf="project">
     <div class="row">
       <div class="col">
         <label>Proyecto:</label>
@@ -34,12 +34,12 @@
     <div class="row">
       <div class="col">
         <label>Fecha de inicio:</label>
-        <input type="text" class="form-control" id="StartDate" name="StartDate" #StartDate
+        <input type="date" class="form-control" id="StartDate" name="StartDate" #StartDate
           [(ngModel)]="project.StartDate" />
       </div>
       <div class="col">
         <label>Fecha final:</label>
-        <input type="text" class="form-control" id="FinishDate" name="FinishDate" #FinishDate
+        <input type="date" class="form-control" id="FinishDate" name="FinishDate" #FinishDate
           [(ngModel)]="project.FinishDate" />
       </div>
       <div class="col">

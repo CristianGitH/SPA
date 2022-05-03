@@ -19,7 +19,7 @@ export class RequirementsSaveComponent implements OnInit {
   constructor(public requirementService: RequirementService,
      private router: Router) { }
 
-    
+
      ngOnInit(): void {
       this.requirement = new Requirement(0, 0, 0, 0, '',  new Date(), 0, new Date(), new Date());
     }
@@ -33,7 +33,7 @@ export class RequirementsSaveComponent implements OnInit {
       }, error => {
         console.log(error);
         this.showMsg = true;
-        this.msg = 'An error has ocurred in the procedure';
+        this.msg = error.error.Message;
         this.type = 'danger';
       });
     }
