@@ -1,0 +1,72 @@
+<div class="container">
+    <br>
+    <h1 align="center">Eliminar Proyecto</h1>
+    <div class="form-row" *ngIf="!showMsg">
+        <div class="alert alert-danger col-md-12" role="alert">
+          ¿Está seguro?
+          <br>
+          <button class="btn btn-outline-danger btn-sm" (click)="delete()">Eliminar</button>
+          <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/proyectos-list' ]">Volver</a>
+          <div class="btn-group" role="group"></div>
+        </div>
+      </div>
+    
+      <div class="form-row" *ngIf="showMsg">
+        <div class="alert alert-{{type}} col-md-12" role="alert">
+          {{msg}}
+          <br>
+          <a class="btn btn-outline-danger btn-sm" [routerLink]="[ '/proyectos-list' ]">Volver</a>
+        </div>
+      </div>
+    
+    <form #ProyectoForm="ngForm" *ngIf="project">
+      <div class="row">
+        <div class="col">
+          <label>Proyecto:</label>
+          <input type="text" class="form-control" id="ProjectID" name="ProjectID" #ProjectID
+            [(ngModel)]="project.ProjectID" readonly />
+        </div>
+        <div class="col">
+          <label>Estado:</label>
+          <input type="text" class="form-control" id="StateID" name="StateID" placeholder="Estado" #StateID
+            [(ngModel)]="project.StateID" />
+        </div>
+        <div class="col">
+          <label>Cliente:</label>
+          <input type="text" class="form-control" id="CustomerID" name="CustomerID" placeholder="Cliente" #CustomerID
+            [(ngModel)]="project.CustomerID" />
+        </div>
+        <div class="col">
+          <label>Nombre:</label>
+          <input type="text" class="form-control" id="Names" name="Names" placeholder="Nombre del proyecto" #Names
+            [(ngModel)]="project.Names" />
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col">
+          <label>Fecha de inicio:</label>
+          <input type="date" class="form-control" id="StartDate" name="StartDate" #StartDate
+            [(ngModel)]="project.StartDate" />
+        </div>
+        <div class="col">
+          <label>Fecha final:</label>
+          <input type="date" class="form-control" id="FinishDate" name="FinishDate" #FinishDate
+            [(ngModel)]="project.FinishDate" />
+        </div>
+        <div class="col">
+          <label>Precio:</label>
+          <input type="number" class="form-control" id="Price" name="Price" placeholder="Precio" #Price
+            [(ngModel)]="project.Price" />
+        </div>
+        <div class="col">
+          <label>Cantidad de horas:</label>
+          <input type="number" class="form-control" id="AmountHours" name="AmountHours" placeholder="Cantidad de horas"
+            #AmountHours [(ngModel)]="project.AmountHours" />
+        </div>
+      </div>
+      <br>
+      <button class="btn btn-outline-primary btn-sm" (click)="delete()">Eliminar</button>
+      <a class="btn btn-outline-primary btn-sm" [routerLink]="[ '/proyectos-list']">Volver</a>
+    </form>
+</div>

@@ -28,4 +28,8 @@ export class ProyectosService {
   public edit(project: Project): Observable<any>{
     return this.httpClient.put(`${this.url}/${project.ProjectID}`, project);
   }
+
+  public delete(id: number) {
+    return this.httpClient.delete(`${this.url}/${id}`)
+  };
 }

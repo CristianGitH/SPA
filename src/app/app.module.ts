@@ -20,6 +20,7 @@ import { RequirementsSaveComponent } from './component/Requirement/requirements-
 import { RequirementsDeleteComponent } from './component/Requirement/requirements-delete/requirements-delete.component';
 import { ProjectEditComponent } from './component/Project/project-edit/project-edit.component';
 import { RequirementService } from './service/requirement.service';
+import { ProjectDeleteComponent } from './component/Project/project-delete/project-delete.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { RequirementService } from './service/requirement.service';
     RequirementsEditComponent,
     RequirementsSaveComponent,
     RequirementsDeleteComponent,
-    ProjectEditComponent
+    ProjectEditComponent,
+    ProjectDeleteComponent
 
   ],
   imports: [
