@@ -12,11 +12,13 @@ import { RequirementsDeleteComponent } from './component/Requirement/requirement
 import { RequirementsSaveComponent } from './component/Requirement/requirements-save/requirements-save.component';
 import { ProjectEditComponent } from './component/Project/project-edit/project-edit.component';
 import { RequirementService } from './service/requirement.service';
+import { ProjectDeleteComponent } from './component/Project/project-delete/project-delete.component';
 
 const routes: Routes = [
   { path: 'proyectos-list', component: ProyectosListaComponent},
   { path: 'proyectos-save', component: ProyectosSaveComponent},
   { path: 'project-edit/:id', component: ProjectEditComponent},
+  { path: 'project-delete/:id', component: ProjectDeleteComponent},
   { path: 'clientes-lista', component: ClienteListaComponent},
   { path: 'cliente-delete/:id', component: ClienteDeleteComponent},
   { path: 'cliente-guardar', component: ClienteGuardarComponent},
